@@ -1,0 +1,94 @@
+/* RESET & BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: #fff; color: #333; line-height: 1.6; }
+
+/* --- HERO SECTION --- */
+.container { display: flex; min-height: 100vh; width: 100%; }
+.left-panel { flex: 1; display: flex; justify-content: center; align-items: center; background: #e4e0f7; position: relative; }
+.right-panel { flex: 1; background: #e7fbe4; display: flex; justify-content: center; align-items: center; padding: 40px; }
+
+/* SỬA AVATAR: CĂN TRÊN ĐỂ KHÔNG MẤT TÓC */
+.image-wrapper { 
+    width: 350px; height: 500px; border-radius: 30px; 
+    overflow: hidden; z-index: 2; box-shadow: 0 20px 40px rgba(0,0,0,0.15); 
+}
+.main-photo { 
+    width: 100%; height: 100%; object-fit: cover; 
+    object-position: top center; /* Giữ phần tóc của avatar */
+}
+
+.blur-effect { position: absolute; width: 400px; height: 400px; background: #fff; filter: blur(120px); border-radius: 50%; }
+
+.content-box { width: 100%; max-width: 480px; text-align: center; }
+h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 20px; line-height: 1.2; }
+.description { font-size: 1.1rem; color: #555; margin-bottom: 35px; }
+
+/* BUTTONS - ĐỒNG NHẤT TẤT CẢ NÚT */
+.button-group { display: flex; flex-direction: column; gap: 12px; }
+.btn { 
+    padding: 14px; background: #fff; border-radius: 50px; 
+    text-decoration: none; color: #333; font-weight: 600; 
+    border: 1px solid #eee; transition: 0.3s all ease; text-align: center;
+}
+.btn:hover { background: #333; color: #fff; transform: translateY(-3px); }
+
+/* SOCIAL ICONS */
+.social-icons { margin-top: 30px; display: flex; justify-content: center; gap: 20px; }
+.social-icons a { color: #333; font-size: 1.2rem; transition: 0.3s; }
+.social-icons a:hover { color: #6c5ce7; }
+
+/* --- SECTIONS COMMON --- */
+.section { padding: 100px 10%; text-align: center; }
+.gray-bg { background: #fcfcfc; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 60px; }
+
+/* CARD DỰ ÁN & BLOG (THEO MẪU ĐỒ ÁN) */
+.card-single { 
+    background: #fff; padding: 60px 40px; border-radius: 50px; 
+    box-shadow: 0 10px 60px rgba(0,0,0,0.04); max-width: 900px; 
+    margin: 0 auto; border: 1px solid #f0f0f0;
+}
+
+.icon-img { width: 140px; height: 140px; border-radius: 50%; margin-bottom: 25px; object-fit: contain; }
+
+/* BLOG GRID */
+.blog-list-container {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px; margin-top: 30px; text-align: left;
+}
+.blog-item {
+    background: #f8f9fa; padding: 15px 20px; border-radius: 15px;
+    border-left: 4px solid #f89820; font-weight: 600; font-size: 0.9rem; transition: 0.3s;
+}
+.blog-item span { color: #f89820; margin-right: 10px; font-family: 'Playfair Display', serif; }
+.blog-item:hover { background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transform: translateX(5px); }
+
+.tags { display: flex; justify-content: center; gap: 12px; margin-top: 25px; }
+.tags span { background: #f1f0ff; color: #8371ff; padding: 6px 18px; border-radius: 12px; font-size: 0.85rem; font-weight: 600; }
+
+.btn-dark { 
+    background: #1a1a1a; color: #fff; padding: 14px 28px; border-radius: 10px; 
+    text-decoration: none; display: inline-flex; align-items: center;
+    gap: 10px; font-weight: 500; transition: 0.3s; 
+}
+.btn-dark:hover { background: #000; transform: translateY(-2px); }
+
+/* SKILLS */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; text-align: left; }
+.progress-bar { height: 10px; background: #f0f0f0; border-radius: 10px; margin: 10px 0 25px; overflow: hidden; }
+.progress { height: 100%; background: #6c5ce7; }
+
+/* CHỨNG CHỈ */
+.cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.cert-card { background: #fff; padding: 25px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.03); }
+.cert-card img { width: 100%; border-radius: 15px; margin-bottom: 20px; }
+
+/* FOOTER */
+.footer { padding: 60px; background: #1a1a1a; color: #999; text-align: center; }
+
+@media (max-width: 992px) {
+    .container { flex-direction: column; }
+    .left-panel, .right-panel { width: 100%; min-height: 50vh; }
+    .about-grid, .cert-grid { grid-template-columns: 1fr; }
+}
