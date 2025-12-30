@@ -304,3 +304,28 @@ h1 {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+.cv-image-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+.cv-image-container:hover {
+    transform: scale(1.02); /* Hiệu ứng phóng to nhẹ khi di chuột */
+}
+
+.cv-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Tùy chỉnh nút CV trong group để nổi bật hơn */
+.button-group .btn i {
+    margin-right: 8px;
+}
